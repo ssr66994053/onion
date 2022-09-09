@@ -5,13 +5,13 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ssr66994053/carrot"
+	"github.com/ssr66994053/onion"
 )
 
 func main() {
-	fmt.Println("carrot starting ...")
+	fmt.Println("onion starting ...")
 
-	c := carrot.New(carrot.DefaultConfig())
+	c := onion.New(onion.DefaultConfig())
 	c.GetFunc("/hello", func(w http.ResponseWriter, req *http.Request, params map[string]string) {
 		w.Write([]byte("from /hello"))
 	})
